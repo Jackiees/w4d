@@ -11,6 +11,27 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   //
+  
+  var today = new Date();
+  var dd = today.getDate();
+  var yyyy = today.getFullYear();
+
+  if(dd<10) {
+      dd='0'+dd
+  } 
+
+  var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+  ];
+
+  var d = new Date();
+  var month = monthNames[d.getMonth()];
+
+  today = dd+' ' + month + ' ' + yyyy;
+  
+  $scope.today = "today: " + today;
+  $scope.endDate = "departure: 24 February 2016";
+
   var end = new Date('02/24/2016 00:00 AM');
 
   var _second = 1000;
