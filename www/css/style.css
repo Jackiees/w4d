@@ -1,32 +1,14 @@
 /* Empty. Add your own CSS if you like */
-table{
-    border: 1px solid black;
-	width: 100%;
-	height: 100%;
-}
 
-tr{
+.col{
 	border: 1px solid black;
+	margin-bottom: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
 	height: auto;
 }
 
-td{
-	text-align: center;
-	vertical-align: middle;
-	font-size: 20px;
-}
-
-.ColumnDay{
-	width: 20%;
-	border: 1px solid black;
-}
-
-.ColumnMeal{
-	width: 70%;
-	border: 1px solid black;
-}
-
-.ColumnButton{
-	width: 10%;
-	border: 1px solid black;
+.row{
+	height: auto;
+	padding-right: 15px;
 }

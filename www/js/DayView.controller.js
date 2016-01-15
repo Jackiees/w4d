@@ -1,6 +1,6 @@
 angular.module('DayView.controller', [])
 
-.controller('DayViewCtrl', function($scope) {
+.controller('DayViewCtrl', function($scope, $state) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -9,6 +9,12 @@ angular.module('DayView.controller', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   //
+	
+//
+$scope.goTo = function(stateName) {
+    $state.go(stateName)
+};
+//
   
   var today = new Date();
   var dd = today.getDate();
