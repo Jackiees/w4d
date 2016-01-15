@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'W4D.services' is found in services.js
 // 'W4D.controllers' is found in controllers.js
-angular.module('W4D', ['ionic', 'W4D.controllers', 'W4D.services'])
+angular.module('W4D', ['ionic', 'WeekList.controller', 'W4D.services', 'DayView.controller', 'WeekView.controller'])
 
 //Puts the NavBar always at the bottom
 .config(function($ionicConfigProvider) {

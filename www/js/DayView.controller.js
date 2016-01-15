@@ -1,6 +1,4 @@
-angular.module('W4D.controllers', [])
-
-.controller('WeekViewCtrl', function($scope) {})
+angular.module('DayView.controller', [])
 
 .controller('DayViewCtrl', function($scope) {
   // With the new view caching in Ionic, Controllers are only called
@@ -63,10 +61,4 @@ angular.module('W4D.controllers', [])
 
   timer = setInterval(showRemaining, 1000);
 
-})
-
-.controller('WeekListCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
 });
