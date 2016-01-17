@@ -30,3 +30,7 @@
 p {
 	font-size: 40px;
 }
+
+.edit-button {
+    color: lightgrey;
+}

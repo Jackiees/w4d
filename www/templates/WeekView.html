@@ -1,69 +1,18 @@
-<!--
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/WeekView.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
-    </p>
-  </ion-content>
-</ion-view>
--->
-
-
 <ion-view view-title="Week 3, Januari" on-swipe-left="goTo('tab.WeekList')" on-swipe-right="goTo('tab.DayView')">
 <!--	<ion-content>-->
 	<div class="calendar">
 		<div class="fill-area">
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
+			<div class="row" ng-repeat="i in WeekPlanArray">
+				<div class="col col-20">{{WeekPlanArray[$index].day}}<br>{{WeekPlanArray[$index].date}}</div>
+				<div class="col col-60" ng-hide="i.edit == false"><input type="string" ng-model=WeekPlanArray[$index].meal>	</div>
+				<div class="col col-60" ng-show="i.edit == false">{{WeekPlanArray[$index].meal}}</div>
+				<div class="col col-20">
+					<button ng-click="toggleEdit()" class="button-icon edit-button">
+						<i ng-class="{'icon ion-edit' : i.edit == false, 'icon ion-checkmark' : i.edit == true}"></i>
+					</button>
+				</div>		
 			</div>
 
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
-			</div>
-
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
-			</div>
-
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
-			</div>
-
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
-			</div>
-
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
-			</div>
-
-			<div class="row">
-				<div class="col col-20">Day</div>
-				<div class="col col-60">Meal</div>
-				<div class="col col-20"><a class="button button-icon icon ion-edit"></a></div>
-			</div>
 		</div>
 	</div>
 <!--</ion-content>-->
