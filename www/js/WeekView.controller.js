@@ -1,6 +1,6 @@
 angular.module('WeekView.controller', [])
 
-.controller('WeekViewCtrl', function($scope, $state, $ionicViewSwitcher) {
+.controller('WeekViewCtrl', function($scope, $state, $ionicViewSwitcher,$stateParams) {
 
 $scope.goTo = function(stateName) {
     $state.go(stateName)
@@ -50,5 +50,10 @@ $scope.toggleEdit = function () {
 	this.i.edit = !this.i.edit;
 //	console.log(this.i.edit);
 };
+
+$scope.goToDay = function(index) {
+	var meal = $scope.WeekPlanArray[index].meal;
+	$state.go('tab.DayView',{"obj":meal});
+}
 	 
 });

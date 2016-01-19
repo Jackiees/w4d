@@ -3,7 +3,7 @@
 	<div class="calendar">
 		<div class="fill-area">
 			<div class="row" ng-repeat="i in WeekPlanArray">
-				<div class="col col-20">{{WeekPlanArray[$index].day}}<br>{{WeekPlanArray[$index].date}}</div>
+				<div class="col col-20" ng-click="goToDay($index);">{{WeekPlanArray[$index].day}}<br>{{WeekPlanArray[$index].date}}</div>
 				<div class="col col-60" ng-hide="i.edit == false"><input type="string" ng-model=WeekPlanArray[$index].meal>	</div>
 				<div class="col col-60" ng-show="i.edit == false">{{WeekPlanArray[$index].meal}}</div>
 				<div class="col col-20">

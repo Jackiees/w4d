@@ -57,7 +57,7 @@ angular.module('W4D', ['ionic', 'WeekList.controller', 'W4D.services', 'DayView.
   })
 
   .state('tab.DayView', {
-      url: '/DayView',
+      url: '/DayView/:obj',
       views: {
         'DayView': {
           templateUrl: 'templates/DayView.html',
